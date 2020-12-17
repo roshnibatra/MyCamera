@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/capture_picture"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="fitCenter"
@@ -22,7 +22,7 @@
         app:srcCompat="@drawable/button_pressed"/>
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/toggle_camera"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginBottom="60dp"
@@ -36,7 +36,7 @@
         app:srcCompat="@drawable/camera_toggle" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/flash_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
