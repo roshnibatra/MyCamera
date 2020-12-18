@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mPreviewView = findViewById(R.id.preview_camera);
         uiHandler = new Handler();
         if (allPermissionsGranted()) {
