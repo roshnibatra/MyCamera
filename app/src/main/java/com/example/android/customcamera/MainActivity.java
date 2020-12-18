@@ -78,9 +78,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS);
         }
-        
-        requestSignIn();
 
+        requestSignIn();
 
     }
 
@@ -91,21 +90,21 @@ public class MainActivity extends AppCompatActivity {
                 .requestScopes(new Scope(DriveScopes.DRIVE_FILE))
                 .build();
 
-        GoogleSignInClient client = GoogleSignIn.getClient(this,signInOptions);
-        startActivityForResult(client.getSignInIntent(),400);
+        GoogleSignInClient client = GoogleSignIn.getClient(this, signInOptions);
+        startActivityForResult(client.getSignInIntent(), 400);
 
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch(requestCode) {
+        switch (requestCode) {
             case 400:
-                if(resultCode == RESULT_OK)
-                {
+                if (resultCode == RESULT_OK) {
                     handleSignInIntent(data);
                 }
-                    break;
+
+                break;
         }
     }
 
@@ -283,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void upLoadImage() {
-        ProgressDialog progressBar =  new ProgressDialog(MainActivity.this);
+        ProgressDialog progressBar = new ProgressDialog(MainActivity.this);
         progressBar.setTitle("Uploading Image to GoogleDrive");
         progressBar.setMessage("Please Wait ...");
         progressBar.show();
@@ -309,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }
                         }
-                        Toast.makeText(getApplicationContext(),"Uploaded Successfully",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Uploaded Successfully", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -317,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onFailure(@NonNull Exception e) {
                         progressBar.dismiss();
                         e.printStackTrace();
-                        Toast.makeText(getApplicationContext(),"Check your google api key",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Check your google api key", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
