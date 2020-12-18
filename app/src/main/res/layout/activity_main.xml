@@ -19,7 +19,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/button_pressed"/>
+        app:srcCompat="@drawable/image_button_click"/>
 
     <ImageButton
         android:id="@+id/toggle_camera"

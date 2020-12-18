@@ -51,6 +51,7 @@ import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -320,4 +321,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
+//    private void displayNoNetworkToast() {
+//        Snackbar snackbar = Snackbar.make(constraintLayout, R.string.no_internet_connection, Snackbar.LENGTH_SHORT);
+//        snackbar.show();
+//        if (currentItem == 0) {
+//            toggleImage(View.VISIBLE);
+//        }
+//    }
 }
